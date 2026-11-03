@@ -871,6 +871,118 @@ main > section + section {
   white-space: nowrap;
 }
 
+/* Hospedagem: tabela para comparar e buscas do Airbnb */
+.compare-intro {
+  margin: 0 0 1rem;
+}
+
+.compare {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+.compare thead th {
+  padding: 0 0.75rem 0.6rem;
+  border-bottom: 2px solid var(--ink);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.compare tbody th,
+.compare td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare tbody th {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.compare tbody th span,
+.compare td span {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 400;
+}
+
+.compare td {
+  color: var(--ink);
+}
+
+.compare .compare-group th {
+  padding: 1.4rem 0.75rem 0.45rem;
+  border-bottom: 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.compare-links {
+  white-space: nowrap;
+}
+
+.compare-links a {
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.compare-links a + a {
+  margin-top: 0.2rem;
+  font-weight: 500;
+}
+
+.search-links {
+  margin-top: 1.75rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--tip-bg);
+}
+
+.search-links-title {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.search-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.search-links-row a {
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid var(--flag);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.search-links-row a:hover {
+  background: var(--flag);
+  color: var(--flag-ink);
+}
+
 /* Notas */
 .note {
   padding: 1.2rem 1.35rem;
