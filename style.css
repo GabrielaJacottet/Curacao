@@ -827,48 +827,8 @@ main > section + section {
   border-top: 3px solid var(--facade);
 }
 
-.card--wide {
-  grid-column: 1 / -1;
-}
-
 .table-wrap {
   overflow-x: auto;
-}
-
-.budget {
-  width: 100%;
-  max-width: 760px;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
-
-.budget th,
-.budget td {
-  padding: 0.55rem 0.2rem;
-  text-align: left;
-  border-bottom: 1px dotted var(--line);
-}
-
-.budget th {
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.budget td:last-child,
-.budget th:last-child {
-  text-align: right;
-}
-
-.budget td:last-child {
-  color: var(--ink);
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
 }
 
 /* Hospedagem: tabela para comparar e buscas do Airbnb */
@@ -1021,59 +981,6 @@ main > section + section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1.25rem;
-}
-
-/* Rankings */
-.rankings {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-  gap: 1.5rem 2rem;
-}
-
-.ranking {
-  padding-top: 0.9rem;
-  border-top: 2px solid var(--ink);
-}
-
-.ranking-title {
-  margin: 0 0 0.6rem;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-}
-
-.ranking ol {
-  display: grid;
-  gap: 0.25rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: pos;
-}
-
-.ranking li {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  counter-increment: pos;
-}
-
-.ranking li::before {
-  content: counter(pos);
-  width: 1.4rem;
-  flex: none;
-  color: var(--muted);
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  text-align: right;
-}
-
-.ranking li:first-child {
-  font-weight: 800;
-}
-
-.ranking li:first-child::before {
-  color: var(--pin);
 }
 
 /* Regiões: uma fileira de fachadas */
