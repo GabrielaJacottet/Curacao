@@ -1192,3 +1192,7 @@ main > section + section {
     animation: none;
   }
 }
+
+.picks-note {
+  margin-top: 1.25rem;
+}
