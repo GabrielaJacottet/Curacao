@@ -105,6 +105,7 @@
 
 /* Cor da fachada de cada seção */
 #planejamento, .checklist { --facade: var(--sun); }
+#voos { --facade: var(--f-mango); }
 #dicas { --facade: var(--f-lilas); }
 #hospedagem { --facade: var(--f-menta); }
 #praias { --facade: var(--f-lagoa); }
@@ -241,6 +242,7 @@ body::before {
 }
 
 .page-nav a[href="#planejamento"] { --sw: var(--sun); }
+.page-nav a[href="#voos"] { --sw: var(--f-mango); }
 .page-nav a[href="#dicas"] { --sw: var(--f-lilas); }
 .page-nav a[href="#hospedagem"] { --sw: var(--f-menta); }
 .page-nav a[href="#praias"] { --sw: var(--f-lagoa); }
@@ -595,6 +597,166 @@ main > section + section {
 .checklist input:checked + label {
   color: var(--muted);
   text-decoration: line-through;
+}
+
+/* Voos: um cartão de embarque por sentido */
+.flights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 1.6rem;
+}
+
+.flight-leg {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.flight-leg-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  padding: 1rem 1.35rem;
+  background: var(--facade);
+  color: var(--on-facade);
+}
+
+.flight-leg-head h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.flight-leg-kicker,
+.flight-route {
+  margin: 0;
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.flight-leg-kicker {
+  font-size: 0.72rem;
+}
+
+.flight-route {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.flight-list {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.6rem 1.35rem 1rem;
+  list-style: none;
+}
+
+.flight {
+  display: grid;
+  gap: 0.6rem;
+  padding-block: 0.85rem;
+}
+
+.flight-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.flight-no {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.flight-points {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.flight-point {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+  margin: 0;
+}
+
+.flight-point:last-child {
+  text-align: right;
+}
+
+.flight-time {
+  font-family: var(--font-mono);
+  font-size: clamp(1.45rem, 4vw, 1.85rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.flight-day {
+  margin-left: 0.15rem;
+  font-size: 0.45em;
+  color: var(--pin);
+}
+
+.flight-code {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.flight-place {
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.flight-arrow {
+  width: clamp(1.75rem, 6vw, 3rem);
+  margin-top: 0.75rem;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.layover {
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.layover strong {
+  color: var(--ink);
+}
+
+.flight-foot {
+  margin-top: auto;
+  padding: 0.9rem 1.35rem 1.1rem;
+  border-top: 2px dashed var(--line);
+}
+
+.flights-note {
+  margin-top: 1.6rem;
 }
 
 /* Grades de lugares */
